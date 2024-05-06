@@ -163,7 +163,21 @@ def main():
 
     gcs_traj = gcs.NormalizeSegmentTimes(gcs_traj)
 
+    # set to True to display a plot of joints vs time
+    plot_gcs_traj = False
+    if plot_gcs_traj:
+        ts = np.linspace(gcs_traj.start_time(), gcs_traj.end_time(), 1000)
+        gcs_traj_points = []
+        for t in ts:
+            gcs_traj_points.append(gcs_traj.value(t).flatten())
+
+        gcs_traj_points = np.array(gcs_traj_points)
+        for i in range(dofs):
+            plt.plot(ts, gcs_traj_points[:,i])
+        plt.show()
+
     # clip stationary start and end segments for toppra
+    # set to True to fix the Toppra failure
     clip_terminal_segments = False
     if clip_terminal_segments:
         num_gcs_segments = gcs_traj.get_number_of_segments()        
