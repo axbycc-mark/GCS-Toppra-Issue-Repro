@@ -1,0 +1,17 @@
+# Blender 4.1.1 MTL File: 'xarm7_with_materials.blend'
+# www.blender.org
+
+newmtl rough_silver
+Kd 0.558610 0.558610 0.558610
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 6.499999
+d 1.000000
+illum 3
+Pr 0.216667
+Pm 0.183333
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
