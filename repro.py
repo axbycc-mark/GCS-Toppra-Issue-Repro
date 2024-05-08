@@ -160,7 +160,8 @@ def main():
         with open("gcs.txt", "w") as f:
             f.write(graph_viz)
         raise RuntimeError(f"GCS Failed {solution_result}")
-
+    else:
+        print(f"Solver used in convex restriction: {result.get_solver_id().name()}")
     gcs_traj = gcs.NormalizeSegmentTimes(gcs_traj)
 
     # set to True to display a plot of joints vs time
