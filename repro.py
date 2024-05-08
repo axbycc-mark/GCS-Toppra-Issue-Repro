@@ -210,4 +210,9 @@ def main():
 
     
 if __name__ == "__main__":
+    import pydrake
+    print("Solver infos")
+    print(pydrake.solvers.MakeFirstAvailableSolver([
+        pydrake.solvers.ClpSolver.id(), pydrake.solvers.MosekSolver.id()
+    ]).solver_id().name())
     main()
